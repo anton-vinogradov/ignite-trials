@@ -42,8 +42,9 @@ public class Trial3 extends AbstractTrial {
             // Использование reflection запрещено
 
             // Правки можно вносить от этой линии
-
-
+            while (!val.compareAndSet(false, true)) ;
+            put(containsKey(2) ? 3 : containsKey(1) ? 2 : 1);
+            val.set(false);
             // До этой
         });
     }

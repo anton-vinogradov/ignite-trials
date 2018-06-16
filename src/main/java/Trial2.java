@@ -37,8 +37,10 @@ public class Trial2 extends AbstractTrial {
             // Использование reflection запрещено
 
             // Правки можно вносить от этой линии
-
-
+            boolean oldValue = val.get();
+            while (!val.compareAndSet(oldValue,!oldValue))
+                oldValue=!oldValue;
+            put(oldValue?1:2);
             // До этой
         });
     }

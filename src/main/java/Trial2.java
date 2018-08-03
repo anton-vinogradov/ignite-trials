@@ -34,7 +34,7 @@ public class Trial2 extends AbstractTrial {
         return new Thread(() -> {
             // Используйте поле val для синхронизации потоков
             // и метод put(int) для добавления уникального идентификатора
-            // Использование reflection запрещено
+            // Использование reflection и synchronized запрещено
 
             // Правки можно вносить от этой линии
 
